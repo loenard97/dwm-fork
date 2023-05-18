@@ -7,17 +7,17 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=14" };
 
-static const char norm_fg[] = "#e4f0f5";
-static const char norm_bg[] = "#00334E";
-static const char norm_border[] = "#9fa8ab";
+static const char norm_fg[] = "#f8f8f2";
+static const char norm_bg[] = "#282a36";
+static const char norm_border[] = "#f8f8f2";
 
-static const char sel_fg[] = "#e4f0f5";
-static const char sel_bg[] = "#5BAEDC";
-static const char sel_border[] = "#e4f0f5";
+static const char sel_fg[] = "#f8f8f2";
+static const char sel_bg[] = "#bd93f9";
+static const char sel_border[] = "#f8f8f2";
 
-static const char urg_fg[] = "#e4f0f5";
-static const char urg_bg[] = "#29B6F6";
-static const char urg_border[] = "#29B6F6";
+static const char urg_fg[] = "#f8f8f2";
+static const char urg_bg[] = "#ff5555";
+static const char urg_border[] = "#29b6f6";
 
 static const char *colors[][3]      = {
     /*               fg           bg         border                         */
@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", "-config", "~/.config/rofi/config.rasi", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */

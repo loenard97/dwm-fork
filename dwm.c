@@ -419,6 +419,7 @@ void
 buttonpress(XEvent *e)
 {
 	unsigned int i, x, click;
+	unsigned int occ = 0;
 	Arg arg = {0};
 	Client *c;
 	Monitor *m;
@@ -431,10 +432,17 @@ buttonpress(XEvent *e)
 		selmon = m;
 		focus(NULL);
 	}
+
+	for (c = m->clients; c; c = c->next) {
+		occ |= c->tags;
+	}
+	
 	if (ev->window == selmon->barwin) {
 		i = x = 0;
-		do
-			x += TEXTW(tags[i]);
+		do {
+			if (occ & 1 << i || (m->tagset[m->seltags] & 1 << i))
+				x += TEXTW(tags[i]);	// TODO: change mouse click pos
+		}
 		while (ev->x >= x && ++i < LENGTH(tags));
 		if (i < LENGTH(tags)) {
 			click = ClkTagBar;
