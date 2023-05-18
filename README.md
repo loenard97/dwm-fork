@@ -1,9 +1,13 @@
- Customized st fork
+# dwm-fork
 
-This is a customized fork of [dwm](https://dwm.suckless.org/).
+A customized fork of [dwm](https://dwm.suckless.org/).
+The main difference is, that the status bar only shows workspaces that are active, similar to i3-status.
+
+## Screenshot
+![screenshot](screenshots/dwm.webp)
 
 
-## Original README
+# Original README
 
 dwm - dynamic window manager
 ============================
