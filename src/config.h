@@ -7,17 +7,17 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=14" };
 
-static const char norm_fg[] = "#f8f8f2";
-static const char norm_bg[] = "#282a36";
-static const char norm_border[] = "#f8f8f2";
+static const char norm_fg[] = "#e1cde7";
+static const char norm_bg[] = "#0c0618";
+static const char norm_border[] = "#9d8fa1";
 
-static const char sel_fg[] = "#f8f8f2";
-static const char sel_bg[] = "#bd93f9";
-static const char sel_border[] = "#f8f8f2";
+static const char sel_fg[] = "#e1cde7";
+static const char sel_bg[] = "#A114A4";
+static const char sel_border[] = "#e1cde7";
 
-static const char urg_fg[] = "#f8f8f2";
-static const char urg_bg[] = "#ff5555";
-static const char urg_border[] = "#29b6f6";
+static const char urg_fg[] = "#e1cde7";
+static const char urg_bg[] = "#6D55D3";
+static const char urg_border[] = "#6D55D3";
 
 static const char *colors[][3]      = {
     /*               fg           bg         border                         */
