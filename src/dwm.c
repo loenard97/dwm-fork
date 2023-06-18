@@ -270,6 +270,7 @@ static Window root, wmcheckwin;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
+#include "colors-wal-dwm.h"
 
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };
@@ -743,17 +744,14 @@ drawbar(Monitor *m)
 	}
 
 	/* overwrite last workspace */
-	/* i don't know why it's working, but it's working */
-	w = TEXTW(tags[0]);
+	w = TEXTW("-----");
 	drw_setscheme(drw, scheme[SchemeNorm]);
-	drw_text(drw, x, 0, w, bh, lrpad / 2, "tags[i]", 0);
+	drw_text(drw, x, 0, w, bh, lrpad / 2, "\0", 0);
 	x += w;
-
+	
 	if ((w = m->ww - tw - x) > bh) {
 		if (m->sel) {
 			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
-			if (m->sel->isfloating)
-				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
 			drw_setscheme(drw, scheme[SchemeNorm]);
 			drw_rect(drw, x, 0, w, bh, 1, 1);

@@ -54,7 +54,7 @@ uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm
 
 clean:
-	rm -r bin/ obj/
+	rm -rf bin/ obj/
 
 
 .PHONY: all clean install uninstall

@@ -7,6 +7,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=14" };
 
+/*
 static const char norm_fg[] = "#e1cde7";
 static const char norm_bg[] = "#0c0618";
 static const char norm_border[] = "#9d8fa1";
@@ -20,11 +21,12 @@ static const char urg_bg[] = "#6D55D3";
 static const char urg_border[] = "#6D55D3";
 
 static const char *colors[][3]      = {
-    /*               fg           bg         border                         */
+    //               fg           bg         border                         /
     [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
     [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
     [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
 };
+*/
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
